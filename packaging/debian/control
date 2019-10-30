@@ -1,5 +1,5 @@
 #
-#    fty-common-messagebus - Provides message bus for agents
+#    fty-template - Derscritpion of your agent or lib
 #
 #    Copyright (C) 2014 - 2019 Eaton
 #
@@ -17,63 +17,24 @@
 #    with this program; if not, write to the Free Software Foundation, Inc.,
 #    51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 
-Source:         fty-common-messagebus
+Source:         fty-template
 Section:        net
 Priority:       optional
-Maintainer:     fty-common-messagebus Developers <eatonipcopensource@eaton.com>
+Maintainer:     fty-template Developers <eatonipcopensource@eaton.com>
 Standards-Version: 4.0.1.0
 Build-Depends: debhelper (>= 9),
     pkg-config,
-    libsodium-dev,
-    libzmq3-dev,
-    libczmq-dev (>= 3.0.2),
-    libmlm-dev (>= 1.0.0),
-    libcxxtools-dev,
-    libfty-common-dto-dev (>= 1.0.0),
     liblog4cplus-dev,
     libfty-common-logging-dev,
     asciidoc-base | asciidoc, xmlto,
     dh-autoreconf
 
-Package: libfty-common-messagebus1
-Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}
-Description: fty-common-messagebus shared library
- This package contains shared library for fty-common-messagebus:
- provides message bus for agents
-
-Package: libfty-common-messagebus-dev
-Architecture: any
-Section: libdevel
-Depends:
-    ${misc:Depends},
-    libsodium-dev,
-    libzmq3-dev,
-    libczmq-dev (>= 3.0.2),
-    libmlm-dev (>= 1.0.0),
-    libcxxtools-dev,
-    libfty-common-dto-dev (>= 1.0.0),
-    liblog4cplus-dev,
-    libfty-common-logging-dev,
-    libfty-common-messagebus1 (= ${binary:Version})
-Description: fty-common-messagebus development tools
- This package contains development files for fty-common-messagebus:
- provides message bus for agents
-
-Package: fty-common-messagebus
-Architecture: any
-Depends: ${misc:Depends}, ${shlibs:Depends},
-Description: runnable binaries from fty-common-messagebus
- Main package for fty-common-messagebus:
- provides message bus for agents
-
-Package: fty-common-messagebus-dbg
+Package: fty-template-dbg
 Architecture: any
 Section: debug
 Priority: optional
 Depends:
-    fty-common-messagebus (= ${binary:Version}),
     ${misc:Depends}
-Description: fty-common-messagebus debugging symbols
- This package contains the debugging symbols for fty-common-messagebus:
- provides message bus for agents.
+Description: fty-template debugging symbols
+ This package contains the debugging symbols for fty-template:
+ derscritpion of your agent or lib.

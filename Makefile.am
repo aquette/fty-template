@@ -9,18 +9,12 @@ AM_CXXFLAGS = \
     -std=c++11
 
 AM_CPPFLAGS = \
-    ${libsodium_CFLAGS} \
-    ${libzmq_CFLAGS} \
-    ${czmq_CFLAGS} \
-    ${malamute_CFLAGS} \
-    ${cxxtools_CFLAGS} \
-    ${fty_common_dto_CFLAGS} \
     ${log4cplus_CFLAGS} \
     ${fty_common_logging_CFLAGS} \
     -D__STDC_FORMAT_MACROS \
     -I$(srcdir)/include
 
-project_libs = ${libsodium_LIBS} ${libzmq_LIBS} ${czmq_LIBS} ${malamute_LIBS} ${cxxtools_LIBS} ${fty_common_dto_LIBS} ${log4cplus_LIBS} ${fty_common_logging_LIBS}
+project_libs = ${log4cplus_LIBS} ${fty_common_logging_LIBS}
 
 SUBDIRS = doc
 SUBDIRS += include
@@ -41,12 +35,6 @@ DISTCLEANFILES =
 
 if ENABLE_DIST_CMAKEFILES
 EXTRA_DIST += \
-    Findlibsodium.cmake \
-    Findlibzmq.cmake \
-    Findczmq.cmake \
-    Findmalamute.cmake \
-    Findcxxtools.cmake \
-    Findfty_common_dto.cmake \
     Findlog4cplus.cmake \
     Findfty_common_logging.cmake \
     builds/cmake/Modules/ClangFormat.cmake \
@@ -56,9 +44,8 @@ EXTRA_DIST += \
 endif
 
 EXTRA_DIST += \
-    src/fty_common_messagebus_malamute.h \
     README.md \
-    src/fty_common_messagebus_classes.h
+    src/fty_template_classes.h
 
 # NOTE: this "include" syntax is not a "make" but an "autotools" keyword,
 # see https://www.gnu.org/software/automake/manual/html_node/Include.html

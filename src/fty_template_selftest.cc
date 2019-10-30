@@ -1,5 +1,5 @@
 /*  =========================================================================
-    fty_common_messagebus_selftest.c - run selftests
+    fty_template_selftest.c - run selftests
 
     Runs all selftests.
 
@@ -27,7 +27,7 @@
     =========================================================================
 */
 
-#include "fty_common_messagebus_classes.h"
+#include "fty_template_classes.h"
 
 typedef struct {
     const char *testname;           // test name, can be called from command line this way
@@ -39,12 +39,6 @@ typedef struct {
 
 static test_item_t
 all_tests [] = {
-#ifdef FTY_COMMON_MESSAGEBUS_BUILD_DRAFT_API
-// Tests for stable/draft private classes:
-// Now built only with --enable-drafts, so even stable builds are hidden behind the flag
-    { "fty_common_messagebus_malamute", NULL, true, false, "fty_common_messagebus_malamute_test" },
-    { "private_classes", NULL, false, false, "$ALL" }, // compat option for older projects
-#endif // FTY_COMMON_MESSAGEBUS_BUILD_DRAFT_API
     {NULL, NULL, 0, 0, NULL}          //  Sentinel
 };
 
@@ -72,16 +66,16 @@ static void
 test_runall (bool verbose)
 {
     test_item_t *item;
-    printf ("Running fty-common-messagebus selftests...\n");
+    printf ("Running fty-template selftests...\n");
     for (item = all_tests; item->testname; item++) {
         if (streq (item->testname, "private_classes"))
             continue;
         if (!item->subtest)
             item->test (verbose);
-#ifdef FTY_COMMON_MESSAGEBUS_BUILD_DRAFT_API // selftest is still in draft
+#ifdef FTY_TEMPLATE_BUILD_DRAFT_API // selftest is still in draft
         else
-            fty_common_messagebus_private_selftest (verbose, item->subtest);
-#endif // FTY_COMMON_MESSAGEBUS_BUILD_DRAFT_API
+            fty_template_private_selftest (verbose, item->subtest);
+#endif // FTY_TEMPLATE_BUILD_DRAFT_API
     }
 
     printf ("Tests passed OK\n");
@@ -121,7 +115,7 @@ main (int argc, char **argv)
     for (argn = 1; argn < argc; argn++) {
         if (streq (argv [argn], "--help")
         ||  streq (argv [argn], "-h")) {
-            puts ("fty_common_messagebus_selftest.c [options] ...");
+            puts ("fty_template_selftest.c [options] ...");
             puts ("  --verbose / -v         verbose test output");
             puts ("  --number / -n          report number of tests");
             puts ("  --list / -l            list all tests");
@@ -178,13 +172,13 @@ main (int argc, char **argv)
     #endif //
 
     if (test) {
-        printf ("Running fty-common-messagebus test '%s'...\n", test->testname);
+        printf ("Running fty-template test '%s'...\n", test->testname);
         if (!test->subtest)
             test->test (verbose);
-#ifdef FTY_COMMON_MESSAGEBUS_BUILD_DRAFT_API // selftest is still in draft
+#ifdef FTY_TEMPLATE_BUILD_DRAFT_API // selftest is still in draft
         else
-            fty_common_messagebus_private_selftest (verbose, test->subtest);
-#endif // FTY_COMMON_MESSAGEBUS_BUILD_DRAFT_API
+            fty_template_private_selftest (verbose, test->subtest);
+#endif // FTY_TEMPLATE_BUILD_DRAFT_API
     }
     else
         test_runall (verbose);

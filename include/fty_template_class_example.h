@@ -1,5 +1,5 @@
 /*  =========================================================================
-    fty_common_messagebus_dto - class description
+    fty_template_class_example - class description
 
     Copyright (C) 2014 - 2019 Eaton
 
@@ -19,22 +19,27 @@
     =========================================================================
 */
 
-#ifndef FTY_COMMON_MESSAGEBUS_DTO_H_INCLUDED
-#define FTY_COMMON_MESSAGEBUS_DTO_H_INCLUDED
+#ifndef FTY_TEMPLATE_CLASS_EXAMPLE_H_INCLUDED
+#define FTY_TEMPLATE_CLASS_EXAMPLE_H_INCLUDED
 
-#include <string>
-#include <list>
+#ifdef __cplusplus
+extern "C" {
+#endif
 
-#include "fty_common_messagebus.h"
+//  @interface
+//  Create a new fty_template_class_example
+FTY_TEMPLATE_EXPORT fty_template_class_example_t *
+    fty_template_class_example_new (void);
 
-struct FooBar {
-    std::string foo;
-    std::string bar;
-    FooBar() = default;
-    FooBar(const std::string& foo, const std::string& bar) : foo(foo), bar(bar) { }
-};
+//  Destroy the fty_template_class_example
+FTY_TEMPLATE_EXPORT void
+    fty_template_class_example_destroy (fty_template_class_example_t **self_p);
 
-void operator<< (dto::UserData& data, const FooBar& object);
-void operator>> (dto::UserData& payload, FooBar& object);
+
+//  @end
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif

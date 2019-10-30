@@ -1,5 +1,5 @@
 /*  =========================================================================
-    fty_common_messagebus_private_selftest.c - run private classes selftests
+    fty_template_private_selftest.c - run private classes selftests
 
     Runs all private classes selftests.
 
@@ -27,7 +27,7 @@
     =========================================================================
 */
 
-#include "fty_common_messagebus_classes.h"
+#include "fty_template_classes.h"
 
 
 //  -------------------------------------------------------------------------
@@ -35,11 +35,8 @@
 //
 
 void
-fty_common_messagebus_private_selftest (bool verbose, const char *subtest)
+fty_template_private_selftest (bool verbose, const char *subtest)
 {
-// Tests for stable private classes:
-    if (streq (subtest, "$ALL") || streq (subtest, "fty_common_messagebus_malamute_test"))
-        fty_common_messagebus_malamute_test (verbose);
 }
 /*
 ################################################################################

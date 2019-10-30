@@ -11,20 +11,8 @@
 *.xml7
 
 # Ignore the source doc texts generated from program sources
-fty_common_messagebus_dto.txt
-fty_common_messagebus_dto.doc
-fty_common_messagebus_interface.txt
-fty_common_messagebus_interface.doc
-fty_common_messagebus_example.txt
-fty_common_messagebus_example.doc
-fty_common_messagebus_example2.txt
-fty_common_messagebus_example2.doc
-fty_common_messagebus_example_req.txt
-fty_common_messagebus_example_req.doc
-fty_common_messagebus_example_rep.txt
-fty_common_messagebus_example_rep.doc
-fty_common_messagebus_example_rep2.txt
-fty_common_messagebus_example_rep2.doc
+fty_template_class_example.txt
+fty_template_class_example.doc
 
 # Make sure to track the manually maintained project description
 !*.adoc

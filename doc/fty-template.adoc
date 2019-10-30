@@ -4,24 +4,24 @@ Name(7)
 
 NAME
 ----
-fty-common-messagebus - Overview of Provides message bus for agents
+fty-template - Overview of Derscritpion of your agent or lib
 
 
 SYNOPSIS
 --------
 
-Project fty-common-messagebus aims to ... (short marketing pitch)
+Project fty-template aims to ... (short marketing pitch)
 
 It delivers several programs with their respective man pages:
 
 and public classes in a shared library:
- fty_common_messagebus_interface.3
+ fty_template_class_example.3
 
 Generally you can compile and link against it like this:
 ----
-#include <fty_common_messagebus.h>
+#include <fty_template.h>
 
-cc ['flags'] 'files' -lfty_common_messagebus ['libraries']
+cc ['flags'] 'files' -lfty_template ['libraries']
 ----
 
 

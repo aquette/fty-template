@@ -8,12 +8,12 @@ exec_prefix=@exec_prefix@
 libdir=@libdir@
 includedir=@includedir@
 
-Name: libfty_common_messagebus
-Description: Provides message bus for agents
+Name: libfty_template
+Description: Derscritpion of your agent or lib
 Version: @VERSION@
 
 Requires.private: @pkg_config_names_private@
-Libs: -L${libdir} -lfty_common_messagebus
+Libs: -L${libdir} -lfty_template
 Cflags: -I${includedir} @pkg_config_defines@
 Libs.private: @pkg_config_libs_private@
 

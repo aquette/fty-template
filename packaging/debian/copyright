@@ -1,9 +1,9 @@
 Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
-Upstream-Name: fty-common-messagebus
+Upstream-Name: fty-template
 
 Files: *
-Copyright: 2015- fty-common-messagebus Developers <eatonipcopensource@eaton.com>
-License: fty-common-messagebus_license
+Copyright: 2015- fty-template Developers <eatonipcopensource@eaton.com>
+License: fty-template_license
  Copyright (C) 2014 - 2019 Eaton
  .
  This program is free software; you can redistribute it and/or modify

@@ -1,5 +1,5 @@
 /*  =========================================================================
-    fty_common_messagebus_exception - class description
+    fty-template - Derscritpion of your agent or lib
 
     Copyright (C) 2014 - 2019 Eaton
 
@@ -19,17 +19,12 @@
     =========================================================================
 */
 
-#ifndef FTY_COMMON_MESSAGEBUS_EXCEPTION_H_INCLUDED
-#define FTY_COMMON_MESSAGEBUS_EXCEPTION_H_INCLUDED
+#ifndef FTY_TEMPLATE_H_H_INCLUDED
+#define FTY_TEMPLATE_H_H_INCLUDED
 
-namespace messagebus {
+//  Include the project library file
+#include "fty_template_library.h"
 
-    class MessageBusException : public std::runtime_error {
-      public:
-        MessageBusException(const std::string& what) : std::runtime_error(what) {}
-        MessageBusException(const char* what) : std::runtime_error(what) {}
-        ~MessageBusException() = default;
-    };
-}
+//  Add your own public definitions here, if you need them
 
 #endif

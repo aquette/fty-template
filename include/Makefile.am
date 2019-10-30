@@ -3,15 +3,12 @@
 #  Read the zproject/README.md for information about making permanent changes. #
 ################################################################################
 nobase_include_HEADERS = \
-    fty_common_messagebus.h \
-    fty_common_messagebus_exception.h \
-    fty_common_messagebus_message.h \
-    fty_common_messagebus_library.h
+    fty_template.h \
+    fty_template_library.h
 
 if ENABLE_DRAFTS
 nobase_include_HEADERS += \
-    fty_common_messagebus_dto.h \
-    fty_common_messagebus_interface.h
+    fty_template_class_example.h
 
 endif
 
