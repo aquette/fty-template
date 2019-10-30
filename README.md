@@ -1,30 +1,29 @@
-# fty-common-messagebus
-fty-common-messagebus:
+# fty-template
 
-* Centralize all methods to address Request/Reply, Publish/Subscribe patterns above malamute message bus. 
+This is just a template for agent repository 
 
-## How to build
+## How to create your agent
 
-To build fty-common-messagebus project run:
+To reate your agent, you have to specify this template when creating a repo on gitbub.
 
-```bash
-./autogen.sh
-./configure
-make
-make check # to run self-test
-```
-
-## How to use the dependency in your project
-
-In the project.xml, add following lines:
+Then you have to update the project.xml file and run from the local clone of your repo the tools ProjectXML from the repo FTY
 
 ```bash
-<use project = "fty-common-messagebus" libname = "libfty_common_messagebus" header = "fty_common_messagebus.h"
-        repository = "https://github.com/42ity/fty-common-messagebus.git"
-        release = "master"
-        test = "fty_common_messagebus_selftest" />
+../FTY/ProjectXML -A --kill-cmake
 ```
 
-## Howto 
+Then you can add all the file needed: Example with generation of the template:
 
-See all samples in src folder.
+```bash
+	doc/fty-template.adoc
+	include/fty_template.h
+	include/fty_template_class_example.h
+	include/fty_template_library.h
+	packaging/debian/fty-template.dsc.obs
+	packaging/redhat/fty-template.spec
+	src/fty_template_class_example.cc
+	src/fty_template_classes.h
+	src/fty_template_private_selftest.cc
+	src/fty_template_selftest.cc
+	src/libfty_template.pc.in
+```
