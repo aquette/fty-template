@@ -52,7 +52,6 @@
         pretty-print = "no" keep-tree = "true" />
 
     <!-- Here we define dependencies, and dependencies of dependencies.... -->
-
     <!-- Example with fty-common-logging which is necessary almost all the time -->
     <use project = "fty-common-logging" libname = "libfty_common_logging" header = "fty_log.h"
         repository = "https://github.com/42ity/fty-common-logging.git"
@@ -66,7 +65,7 @@
     </use>
 
 
-    <!-- Here we the name of the class. There is a small function usefull to get unit test -->
+    <!-- Here we the name of the class -->
     <class name = "fty_template_class_example" selftest = "0" private = "0"/>
 
     <!-- For header only use: <header name ="fty_XXXX" /> -->
