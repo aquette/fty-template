@@ -4,15 +4,15 @@ This is just a template for agent repository
 
 ## How to create your agent
 
-To reate your agent, you have to specify this template when creating a repo on gitbub.
+To create your agent, you have to specify this template when creating a repository on gitbub.
 
-Then you have to update the project.xml file and run from the local clone of your repo the tools ProjectXML from the repo FTY
+Then you have to update the project.xml file and run from the local clone of your repository the tool ProjectXML from the repo FTY
 
 ```bash
 ../FTY/ProjectXML -A --kill-cmake
 ```
 
-Then you can add all the file needed: Example with generation of the template:
+Then you can add all the files needed: Example with generation of the template:
 
 ```bash
 	doc/fty-template.adoc
