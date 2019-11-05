@@ -9,7 +9,7 @@ To create your agent, you have to specify this template when creating a reposito
 Then you have to update the project.xml file and run from the local clone of your repository the tool ProjectXML from the repo FTY
 
 ```bash
-../FTY/ProjectXML -A --kill-cmake
+../FTY/ProjectXML -A
 ```
 
 Then you can add all the files needed: Example with generation of the template:
